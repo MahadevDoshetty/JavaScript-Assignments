@@ -26,10 +26,14 @@
 */
 
 function countVowels(str) {
-  // Your code here
-}
-
-module.exports = { countVowels };
-
-
-
+  let count = 0;
+  const vowels = ["a", "e", "i", "o", "u"];
+  for (const char of str) {
+    if (vowels.includes(char.trim().toLowerCase())) {
+      count++;
+    };
+  };
+  return count;
+};
+countVowels("Programming")
+module.exports = { countVowels }; 
