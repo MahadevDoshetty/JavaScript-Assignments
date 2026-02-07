@@ -20,9 +20,13 @@
 
 
 function countOccurrences(arr) {
-  // Your code here
+  const myObj = {};
+  let i = 0;
+  // We need to make a key value pair, where key should be the input arrays elements, and value should be the count
+  arr.map((val, index) => {
+    myObj[val] = (myObj[val] || 0) + 1;
+  });
+  return myObj;
 }
-
+countOccurrences( [10, 20, 10, 30, 20, 20]);
 module.exports = countOccurrences;
-
-
