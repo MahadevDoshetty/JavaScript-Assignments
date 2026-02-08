@@ -16,7 +16,7 @@
 */
 
 function getPrimesUpTo100() {
-  // Your code here
+  
 }
-
+getPrimesUpTo100()
 module.exports = { getPrimesUpTo100 };

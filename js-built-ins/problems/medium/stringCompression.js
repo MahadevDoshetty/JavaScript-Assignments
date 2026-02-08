@@ -21,7 +21,7 @@
   - `npm run test-compressString`
 */
 function compression(str) {
-  // Your code here
+  
 }
 
 module.exports = compression;

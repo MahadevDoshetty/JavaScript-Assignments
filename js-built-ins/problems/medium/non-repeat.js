@@ -21,6 +21,26 @@
   - `npm run test-nonrepeat`
 */
 function nonrepeat(str) {
-  // Your code here
-}
+  let newStr = "";
+  if (str.trim() == "" || str.trim() == null || str.trim() == undefined) {
+    newStr = null;
+    return newStr;
+  }
+  for (let i = 0; i < str.length; i++) {
+    let iterator = str.matchAll(str[i]);
+    let arr = Array.from(iterator);
+    if (arr.length == 1) {
+      newStr += str[i];
+    };
+  };
+  if (newStr.length > 1) {
+    newStr = newStr[0];
+  };
+  if (newStr == "" || newStr == undefined) {
+    newStr = null;
+  }
+  return newStr;
+};
+let res = nonrepeat("a!b@c#d$a");
+console.log(res);
 module.exports = nonrepeat;
